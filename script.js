@@ -10,7 +10,8 @@ let boardSetup = () => {
     let innerBox = document.createElement("div");
     innerBox.setAttribute("class", "pixel");
     innerBox.setAttribute("style", `width: ${700/chosenSize}px; height: ${700/chosenSize}px;`)
-    innerBox.addEventListener("mouseover", function(){innerBox.setAttribute("class", "active");})
+    /* innerBox.addEventListener("mouseover", function(){innerBox.setAttribute("class", "active");}) */
+    innerBox.addEventListener("mouseover", function(){innerBox.style.backgroundColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;});
     mainBox.appendChild(innerBox);
   };
 };
