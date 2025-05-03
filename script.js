@@ -3,6 +3,9 @@ const sizeButton = document.querySelector("#size");
 
 let boardSetup = () => {
   let chosenSize = prompt("Choose the number of squares per side (max 100)");
+  while (chosenSize>100){
+    chosenSize = prompt("Choose the number of squares per side (max 100)");
+  }
   for (let i = 0; i<chosenSize*chosenSize; i++){
     let innerBox = document.createElement("div");
     innerBox.setAttribute("class", "pixel");
